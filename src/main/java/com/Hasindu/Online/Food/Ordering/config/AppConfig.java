@@ -33,7 +33,7 @@ public class AppConfig {
                 .csrf(csrf -> csrf.disable())      // Disable CSRF protection (not recommended for stateful sessions, but okay for stateless)
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()));     // Configure CORS settings using a custom configuration source
 
-        return null; // Return null here might be a placeholder or an oversight
+        return http.build(); // Return null here might be a placeholder or an oversight
     }
 
     private CorsConfigurationSource corsConfigurationSource() {
